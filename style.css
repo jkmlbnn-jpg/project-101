@@ -1,48 +1,47 @@
+
 body {
     font-family: Arial, sans-serif;
     background-image: url(background.png);
     background-size: cover;
     background-position: center;
-    min-height: auto;
-    margin: 80px;
+    min-height: 100vh;
+    margin: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .login-container,
 .signup-container {
     background: white;
-    padding: 150px;
-    width: fit-content; 
-    border-radius: 50px;
-
+    padding: 35px;
+    width: 350px;
+    border-radius: 15px;
 }
 
-h3{
+h3 {
     text-align: center;
     font-size: 25px;
     color: #1e3a5f;
 }
 
-h6{
+h6 {
     text-align: center;
     font-size: 14px;
     color: black;
 }
 
-.p{
+p {
     text-align: center;
     font-size: 14px;
     color: black;
 }
 
-label{
+label {
     display: block;
     margin-top: 15px;
     font-weight: bold;
-    
 }
 
 input {
@@ -64,5 +63,3 @@ button {
     border-radius: 6px;
     cursor: pointer;
 }
-
-
