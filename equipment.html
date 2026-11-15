@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EquipTrack | Equipment</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="sidebar">
+        <h2>EquipTrack</h2>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="equipment.html" class="active">Equipment</a>
+            <a href="borrowings.html">My Borrowings</a>
+            <a href="history.html">History</a>
+        </nav>
+
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <section class="page-header">
+            <h1>Equipment Catalog</h1>
+            <p>Browse the available equipment at CICS and submit a borrowing request.</p>
+        </section>
+
+
+        <!-- EQUIPMENT CARDS -->
+        <section class="equipment-grid">
+
+            <div class="equipment-card">
+                <img src="https://placehold.co/600x400?text=Laptop" alt="Laptop">
+
+                <div class="equipment-info">
+                    <h3>Laptop</h3>
+                    <p>Color: Black</p>
+                    <p>Available: <strong>10</strong></p>
+                    <button class="borrow-btn">Borrow</button>
+                </div>
+            </div>
+
+
+            <div class="equipment-card">
+                <img src="https://placehold.co/600x400?text=Projector" alt="Projector">
+
+                <div class="equipment-info">
+                    <h3>Projector</h3>
+                    <p>Color: White</p>
+                    <p>Available: <strong>5</strong></p>
+                    <button class="borrow-btn">Borrow</button>
+                </div>
+            </div>
+
+
+            <div class="equipment-card">
+                <img src="https://placehold.co/600x400?text=Desktop" alt="Desktop Computer">
+
+                <div class="equipment-info">
+                    <h3>Desktop Computer</h3>
+                    <p>Color: Black</p>
+                    <p>Available: <strong>15</strong></p>
+                    <button class="borrow-btn">Borrow</button>
+                </div>
+            </div>
+
+
+            <div class="equipment-card">
+                <img src="https://placehold.co/600x400?text=Monitor" alt="Monitor">
+
+                <div class="equipment-info">
+                    <h3>Monitor</h3>
+                    <p>Color: Black</p>
+                    <p>Available: <strong>8</strong></p>
+                    <button class="borrow-btn">Borrow</button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- LOGOUT POPUP -->
+    <div id="logoutModal" class="modal" hidden>
+        <div class="modal-content">
+            <h2>Confirm Logout</h2>
+            <p>Are you sure you want to log out?</p>
+
+            <div class="modal-buttons">
+                <button id="confirmLogout">Yes, Logout</button>
+                <button id="cancelLogout">No, Stay</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- BORROWING REQUEST POPUP -->
+    <div id="borrowModal" class="modal" hidden>
+        <div class="modal-content borrow-modal-content">
+
+            <h2>Borrow Equipment</h2>
+            <p id="selectedEquipment"></p>
+
+            <form id="borrowForm">
+
+                <p class="account-info"> Your registered name and email will be used for this request. </p>
+
+                <label for="borrowerBlock">Block / Section</label>
+                <input type="text" id="borrowerBlock" required>
+
+                <label for="borrowDate">Borrow Date</label>
+                <input type="date" id="borrowDate" required>
+
+                <label for="returnDate">Return Date</label>
+                <input type="date" id="returnDate" required>
+
+                <label for="borrowPurpose">Purpose (Optional)</label>
+                <textarea id="borrowPurpose" rows="3"></textarea>
+
+                <div class="modal-buttons">
+                    <button type="submit" id="submitBorrow">Submit Request</button>
+                    <button type="button" id="cancelBorrow">Cancel</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>

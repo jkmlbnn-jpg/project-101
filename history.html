@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EquipTrack | History</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="sidebar">
+        <h2>EquipTrack</h2>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="equipment.html">Equipment</a>
+            <a href="borrowings.html">My Borrowings</a>
+            <a href="history.html" class="active">History</a>
+        </nav>
+
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <section class="page-header">
+            <h1>Borrowing History</h1>
+            <p>View your previous borrowing requests and their decisions.</p>
+        </section>
+
+        <!-- HISTORY RECORDS WILL APPEAR HERE -->
+        <section id="historyList" class="history-list">
+        </section>
+
+        <!-- EMPTY MESSAGE -->
+        <div id="emptyHistory" class="empty-message" hidden>
+            <h3>No Borrowing History Yet</h3>
+            <p>Your approved and declined requests will appear here.</p>
+            <a href="equipment.html">Browse Equipment</a>
+        </div>
+
+    </main>
+
+
+    <!-- LOGOUT POPUP -->
+    <div id="logoutModal" class="modal" hidden>
+        <div class="modal-content">
+            <h2>Confirm Logout</h2>
+            <p>Are you sure you want to log out?</p>
+
+            <div class="modal-buttons">
+                <button id="confirmLogout">Yes, Logout</button>
+                <button id="cancelLogout">No, Stay</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
