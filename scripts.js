@@ -19,7 +19,7 @@ if (logoutBtn) {
 // Confirm logout
 if (confirmLogout) {
     confirmLogout.addEventListener("click", function() {
-        window.location.href = "indexs.html";
+        window.location.href = "sign.html";
     });
 }
 
