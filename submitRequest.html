@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equiptrack/submitRequest</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body class="request-page">
+    <div class="item-container">
+        <h2>Item Information:</h2>
+        <form id="itemForm">
+            <label>Selected Item:</label>
+            <div id="itemInfo" class="item-info">
+                <h3 id="itemName"></h3>
+                <p>Category: <span id="itemCategory"></span></p>
+                <p>Item Code: <span id="itemCode"></span></p>
+                <p>Status: <span id="itemStatus"></span></p>
+            </div>
+
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Juan Dela Cruz" required>
+            <label>Sr-code</label>
+            <input type="text" id="srCode" placeholder="24-00000" required>
+            <label>Block</label>
+            <input type="text" id="block" placeholder="IT-3112" required>
+            <label>Return Date</label>
+            <input type="date" id="returnDate" required>
+            <p>3 days</p>
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</body>
+</html>
