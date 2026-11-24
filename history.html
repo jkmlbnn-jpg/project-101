@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EquipTrack | History</title>
+    <link rel="icon" type="image/png" href="pics/logoequip.png">
 
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
@@ -16,8 +16,9 @@
     <!-- SIDEBAR NAVIGATION -->
     <aside class="sidebar">
 
-        <h2>EquipTrack</h2>
-        <p>CICS Equipment Borrowing System</p>
+        <div class="sidebar-brand">
+            <img src="pics/equiptrack.png" alt="EquipTrack - CICS Equipment System" class="sidebar-logo-full">
+        </div>
 
         <nav>
             <a href="home.html">Home</a>
@@ -25,9 +26,9 @@
             <a href="borrowings.html">My Borrowings</a>
             <a href="history.html" class="active">History</a>
             <a href="notifications.html" class="notification-nav-link">
-            Notifications
-            <span id="notificationCount" class="notification-count" hidden>0</span>
-        </a>
+                Notifications
+                <span id="notificationCount" class="notification-count" hidden>0</span>
+            </a>
         </nav>
 
         <button type="button" id="logoutBtn" class="logout-btn">Logout</button>
