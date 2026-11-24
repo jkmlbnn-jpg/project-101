@@ -4,30 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="scripts.js" defer></script>
+
     <title>EquipTrack | Sign Up</title>
 </head>
 <body>
 
     <div class="signup-container">
+
         <h3>Create Account</h3>
 
         <p>Already have an account?</p>
-        <a href="index.html">Sign in</a>
+        <a href="index.html" class="switch-btn">Sign In</a>
 
         <form id="signupForm">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Juan Dela Cruz" required>
 
-            <label for="signupEmail">G-Suite</label>
-            <input type="email" id="signupEmail" placeholder="24-00000@g.batstate-u.edu.ph" required>
+            <label for="name">Name</label>
+            <input type="text" id="name"
+                   placeholder="Juan Dela Cruz" required>
+
+            <label for="signupEmail">Email</label>
+            <input type="email" id="signupEmail"
+                   placeholder="Enter your email" required>
+
+            <label>Account Type</label>
+
+            <div class="role-buttons">
+
+                <button type="button"
+                        class="role-btn active"
+                        data-role="student">
+                    Student
+                </button>
+
+                <button type="button"
+                        class="role-btn"
+                        data-role="staff">
+                    Staff
+                </button>
+
+            </div>
+
+            <input type="hidden" id="signupRole" value="student">
 
             <label for="signupPassword">Password</label>
-            <input type="password" id="signupPassword" placeholder="Password" required>
+
+            <div class="password-wrapper">
+                <input type="password"
+                       id="signupPassword"
+                       placeholder="Password"
+                       required>
+
+                <button type="button"
+                        id="toggleSignupPassword"
+                        class="toggle-password">
+                    SHOW
+                </button>
+            </div>
 
             <button type="submit">Create Account</button>
+
         </form>
+
     </div>
 
 </body>

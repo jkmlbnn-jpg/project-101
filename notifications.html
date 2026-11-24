@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EquipTrack - Notifications</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="sidebar">
+
+        <h2>EquipTrack</h2>
+        <p>CICS Equipment System</p>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="equipment.html">Equipment</a>
+            <a href="borrowings.html">My Borrowings</a>
+            <a href="history.html">History</a>
+            <a href="notifications.html" class="active">
+                Notifications
+                <span id="notificationCount" class="notification-count" hidden>0</span>
+            </a>
+
+            <button type="button" id="logoutBtn">Logout</button>
+        </nav>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <section class="content-section">
+
+            <h2>Notifications</h2>
+
+            <p>Stay updated on your equipment borrowing requests.</p>
+
+            <!-- Notification Filters -->
+            <div class="notification-filters">
+                <button type="button" class="notification-filter active"
+                    data-filter="all">All</button>
+
+                <button type="button" class="notification-filter"
+                    data-filter="unread">Unread</button>
+
+                <button type="button" class="notification-filter"
+                    data-filter="Approved">Approved</button>
+
+                <button type="button" class="notification-filter"
+                    data-filter="Declined">Declined</button>
+            </div>
+
+            <!-- Notification Actions -->
+            <div class="notification-actions">
+                <button type="button" id="markAllReadBtn">
+                    Mark All as Read
+                </button>
+
+                <button type="button" id="clearNotificationsBtn">
+                    Clear All
+                </button>
+            </div>
+
+            <!-- Notification List -->
+            <div id="notificationsList" class="notifications-list">
+                <p>No notifications yet.</p>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Logout Confirmation Popup -->
+    <div id="logoutModal" class="logout-modal" hidden>
+
+        <div class="logout-modal-content">
+
+            <h3>Confirm Logout</h3>
+
+            <p>Are you sure you want to log out?</p>
+
+            <div class="modal-buttons">
+
+                <button type="button" id="confirmLogout">
+                    Yes, Logout
+                </button>
+
+                <button type="button" id="cancelLogout">
+                    Cancel
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

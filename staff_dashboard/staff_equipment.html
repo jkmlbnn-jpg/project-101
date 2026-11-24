@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../scripts.js" defer></script>
+    <title>EquipTrack | Equipment Management</title>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>EquipTrack</h2>
+        <p>CICS Equipment Borrowing System</p>
+
+        <nav>
+            <a href="staff.html">Dashboard</a>
+            <a href="requests.html">Borrowing Requests</a>
+            <a href="staff_equipment.html" class="active">Equipment Management</a>
+            <a href="staff_history.html">Borrowing History</a>
+        </nav>
+
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <main class="main-content">
+
+        <div class="page-header">
+            <h1>Equipment Management</h1>
+            <p>Manage equipment information and monitor availability.</p>
+        </div>
+
+        <div class="equipment-grid" id="staffEquipmentList">
+
+            <div class="equipment-card">
+                <img src="../pics/laptop.jpeg" alt="Laptop">
+                <div class="equipment-info">
+                    <h3>Laptop</h3>
+                    <p>Color: Black</p>
+                    <p>Available: <span class="equipment-availability">10</span></p>
+                    <button class="edit-equipment-btn" data-name="Laptop">
+                        Edit Availability
+                    </button>
+                </div>
+            </div>
+
+            <div class="equipment-card">
+                <img src="../pics/projector.jpeg" alt="Projector">
+                <div class="equipment-info">
+                    <h3>Projector</h3>
+                    <p>Color: White</p>
+                    <p>Available: <span class="equipment-availability">5</span></p>
+                    <button class="edit-equipment-btn" data-name="Projector">
+                        Edit Availability
+                    </button>
+                </div>
+            </div>
+
+            <div class="equipment-card">
+                <img src="../pics/desktop.jpeg" alt="Desktop Computer">
+                <div class="equipment-info">
+                    <h3>Desktop Computer</h3>
+                    <p>Color: Black</p>
+                    <p>Available: <span class="equipment-availability">15</span></p>
+                    <button class="edit-equipment-btn" data-name="Desktop Computer">
+                        Edit Availability
+                    </button>
+                </div>
+            </div>
+
+            <div class="equipment-card">
+                <img src="../pics/monitor.jpeg" alt="Monitor">
+                <div class="equipment-info">
+                    <h3>Monitor</h3>
+                    <p>Color: Black</p>
+                    <p>Available: <span class="equipment-availability">8</span></p>
+                    <button class="edit-equipment-btn" data-name="Monitor">
+                        Edit Availability
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div id="logoutModal" class="logout-modal" hidden>
+        <div class="logout-modal-content">
+            <h3>Confirm Logout</h3>
+            <p>Are you sure you want to log out?</p>
+            <button id="confirmLogout">Yes, Logout</button>
+            <button id="cancelLogout">Cancel</button>
+        </div>
+    </div>
+
+</body>
+</html>

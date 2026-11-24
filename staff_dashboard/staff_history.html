@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../scripts.js" defer></script>
+    <title>EquipTrack | Borrowing History</title>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>EquipTrack</h2>
+        <p>CICS Equipment Borrowing System</p>
+
+        <nav>
+            <a href="staff.html">Dashboard</a>
+            <a href="requests.html">Borrowing Requests</a>
+            <a href="staff_equipment.html">Equipment Management</a>
+            <a href="staff_history.html" class="active">Borrowing History</a>
+        </nav>
+
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <main class="main-content">
+
+        <div class="page-header">
+            <h1>Borrowing History</h1>
+            <p>View all approved and declined borrowing requests from CICS users.</p>
+        </div>
+
+        <div id="staffHistoryList" class="borrowings-grid"></div>
+
+        <div id="emptyStaffHistory" hidden>
+            <h3>No Borrowing History Yet</h3>
+            <p>Approved and declined requests will appear here.</p>
+        </div>
+
+    </main>
+
+    <!-- LOGOUT CONFIRMATION MODAL -->
+    <div id="logoutModal" class="logout-modal" hidden>
+        <div class="logout-modal-content">
+            <h3>Confirm Logout</h3>
+            <p>Are you sure you want to log out?</p>
+
+            <button id="confirmLogout">Yes, Logout</button>
+            <button id="cancelLogout">Cancel</button>
+        </div>
+    </div>
+
+</body>
+</html>

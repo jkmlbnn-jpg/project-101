@@ -5,8 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="scripts.js" defer></script>
     <title>EquipTrack</title>
+
+    <style>
+        .password-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .password-wrapper input {
+            width: 100%;
+            box-sizing: border-box;
+            padding-right: 65px;
+        }
+
+        .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            outline: none;
+            padding: 5px;
+            margin: 0;
+            color: #1e3a5f;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .toggle-password:hover {
+            background: transparent;
+            box-shadow: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -15,18 +51,33 @@
         <h6>Sign in to continue</h6>
 
         <form id="loginForm">
-            <label for="email">G-Suite</label>
-            <input type="email" id="email"
-                placeholder="24-00000@g.batstate-u.edu.ph" required>
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
 
             <label for="password">Password</label>
-            <input type="password" id="password"
-                placeholder="******" required>
+
+            <div class="password-wrapper">
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button type="button" id="togglePassword" class="toggle-password">
+                    SHOW
+                </button>
+            </div>
 
             <button type="submit">Login</button>
 
             <p>Don't have an account yet?</p>
-            <a href="sign.html">Sign Up</a>
+            <a href="sign.html" class="switch-btn">Sign Up</a>
         </form>
     </div>
 

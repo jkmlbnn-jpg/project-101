@@ -18,7 +18,7 @@
     <div class="sidebar">
 
         <h2>EquipTrack</h2>
-        <p>CICS Equipment System</p>
+        <p>CICS Equipment Borrowing System</p>
 
         <nav>
             <a href="home.html" class="active">Home</a>
@@ -26,14 +26,32 @@
             <a href="borrowings.html">My Borrowings</a>
             <a href="history.html">History</a>
 
+            <a href="notifications.html" class="notification-nav-link">
+                Notifications
+                <span id="notificationCount" class="notification-count" hidden>0</span>
+            </a>
+
             <button type="button" id="logoutBtn">Logout</button>
         </nav>
 
     </div>
 
-
     <!-- Main Content -->
     <div class="main-content">
+
+        <!-- Personalized Dashboard Greeting -->
+        <div class="dashboard-greeting">
+
+            <div>
+                <h2 id="dashboardGreeting">Hello, Student!</h2>
+                <p id="dashboardRole">Student Portal</p>
+            </div>
+
+            <div class="greeting-avatar">
+                <span>👤</span>
+            </div>
+
+        </div>
 
         <!-- Welcome Banner -->
         <section class="welcome-banner">
@@ -46,7 +64,6 @@
             </p>
 
         </section>
-
 
         <!-- About EquipTrack -->
         <section class="content-section">
@@ -67,7 +84,6 @@
 
         </section>
 
-
         <!-- Borrowing Process -->
         <section class="content-section">
 
@@ -87,7 +103,6 @@
                     </p>
                 </div>
 
-
                 <div class="step-card">
                     <h3>02</h3>
                     <h4>Submit Request</h4>
@@ -97,7 +112,6 @@
                         the required borrowing information.
                     </p>
                 </div>
-
 
                 <div class="step-card">
                     <h3>03</h3>
@@ -112,7 +126,6 @@
             </div>
 
         </section>
-
 
         <!-- Borrowing Guidelines -->
         <section class="content-section">
@@ -130,7 +143,6 @@
                     </p>
                 </div>
 
-
                 <div class="rule-card">
                     <h4>Handle Equipment with Care</h4>
 
@@ -140,7 +152,6 @@
                     </p>
                 </div>
 
-
                 <div class="rule-card">
                     <h4>Provide Accurate Information</h4>
 
@@ -149,7 +160,6 @@
                         when submitting a borrowing request.
                     </p>
                 </div>
-
 
                 <div class="rule-card">
                     <h4>Wait for Staff Approval</h4>
@@ -164,7 +174,6 @@
 
         </section>
 
-
         <!-- Footer -->
         <footer>
             <p>
@@ -175,11 +184,10 @@
 
     </div>
 
-
     <!-- Logout Confirmation Popup -->
-    <div id="logoutModal" class="modal" hidden>
+    <div id="logoutModal" class="logout-modal" hidden>
 
-        <div class="modal-content">
+        <div class="logout-modal-content">
 
             <h3>Confirm Logout</h3>
 
@@ -187,9 +195,13 @@
 
             <div class="modal-buttons">
 
-                <button type="button" id="confirmLogout">Yes</button>
+                <button type="button" id="confirmLogout">
+                    Yes, Logout
+                </button>
 
-                <button type="button" id="cancelLogout">No</button>
+                <button type="button" id="cancelLogout">
+                    Cancel
+                </button>
 
             </div>
 

@@ -1,5 +1,7 @@
 
-/* GENERAL PAGE DESIGN */
+/* ==============================
+   GENERAL PAGE DESIGN
+============================== */
 
 * {
     box-sizing: border-box;
@@ -7,24 +9,39 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6fa;
+    background-image: url("pics/bg-inside.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
-
-/* SIDEBAR NAVIGATION */
+/* ==============================
+   FROSTED GLASS SIDEBAR
+============================== */
 
 .sidebar {
-    width: 240px;
-    height: 100vh;
-    background-color: #1e3a5f;
-    color: white;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 20px;
+    left: 20px;
+    width: 220px;
+    height: calc(100vh - 40px);
     padding: 25px 15px;
+    color: white;
+
+    background: rgba(30, 58, 95, 0.72);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 22px;
+    box-shadow: 0 10px 35px rgba(15, 35, 65, 0.22);
+
+    z-index: 1000;
+    overflow-y: auto;
 }
 
 .sidebar h2 {
@@ -43,51 +60,124 @@ body {
     color: white;
     text-decoration: none;
     padding: 15px;
-    margin-bottom: 8px;
-    border-radius: 6px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    transition: background 0.25s ease;
 }
 
 .sidebar nav a:hover,
 .sidebar nav a.active {
-    background-color: #34577f;
+    background: rgba(255, 255, 255, 0.22);
 }
-
-
-/* LOGOUT BUTTON */
 
 .sidebar button {
     width: 100%;
     padding: 15px;
     margin-top: 15px;
-    background-color: #34577f;
+    background: rgba(255, 255, 255, 0.16);
     color: white;
-    border: none;
-    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 12px;
     cursor: pointer;
     text-align: left;
+    transition: background 0.25s ease;
 }
 
 .sidebar button:hover {
-    background-color: #456b96;
+    background: rgba(255, 255, 255, 0.28);
 }
 
-
-/* MAIN CONTENT */
+/* ==============================
+   MAIN CONTENT
+============================== */
 
 .main-content {
-    margin-left: 240px;
+    margin-left: 260px;
     padding: 30px;
 }
 
+.page-header {
+    margin-bottom: 30px;
+}
 
-/* WELCOME BANNER */
+.page-header h1 {
+    color: #1e3a5f;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: #52647a;
+}
+
+/* ==============================
+   SHARED FROSTED GLASS PANELS
+============================== */
+
+.content-section,
+.dashboard-greeting,
+.step-card,
+.rule-card,
+.equipment-card,
+.borrowing-card,
+.history-card,
+.notification-card,
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.27);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: 0 8px 32px rgba(30, 58, 95, 0.13);
+}
+
+.content-section,
+.equipment-card,
+.borrowing-card,
+.history-card,
+.notification-card,
+.dashboard-card {
+    border-radius: 25px;
+}
+
+.content-section {
+    padding: 25px;
+    margin-bottom: 40px;
+    position: relative;
+    clear: both;
+}
+
+.content-section h2 {
+    color: #1e3a5f;
+    margin-top: 0;
+}
+
+.content-section p {
+    line-height: 1.7;
+}
+
+.dashboard-card {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==============================
+   WELCOME BANNER
+============================== */
 
 .welcome-banner {
-    background-color: #1e3a5f;
+    background: rgba(30, 58, 95, 0.78);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     color: white;
     padding: 35px;
-    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 18px;
     margin-bottom: 25px;
+    box-shadow: 0 8px 32px rgba(30, 58, 95, 0.18);
 }
 
 .welcome-banner h1 {
@@ -100,28 +190,46 @@ body {
     line-height: 1.6;
 }
 
+/* ==============================
+   DASHBOARD GREETING
+============================== */
 
-/* CONTENT SECTIONS */
-
-.content-section {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+.dashboard-greeting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    border-radius: 18px;
 }
 
-.content-section h2 {
-    color: #1e3a5f;
-    margin-top: 0;
+.dashboard-greeting h2 {
+    margin: 0 0 5px;
+    color: #172b4d;
+    font-size: 24px;
 }
 
-.content-section p {
-    line-height: 1.7;
+.dashboard-greeting p {
+    margin: 0;
+    color: #405675;
+    font-size: 14px;
 }
 
+.greeting-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    font-size: 24px;
+}
 
-/* BORROWING STEPS */
+/* ==============================
+   BORROWING STEPS
+============================== */
 
 .steps-container {
     display: flex;
@@ -131,9 +239,8 @@ body {
 
 .step-card {
     flex: 1;
-    background-color: #f4f6fa;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 12px;
     border-left: 4px solid #1e3a5f;
 }
 
@@ -146,8 +253,9 @@ body {
     color: #1e3a5f;
 }
 
-
-/* BORROWING RULES */
+/* ==============================
+   BORROWING RULES
+============================== */
 
 .rules-container {
     display: grid;
@@ -156,9 +264,8 @@ body {
 }
 
 .rule-card {
-    background-color: #f4f6fa;
     padding: 18px;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 .rule-card h4 {
@@ -166,133 +273,37 @@ body {
     margin-top: 0;
 }
 
+/* ==============================
+   DASHBOARD SUMMARY CARDS
+============================== */
 
-/* FOOTER */
-
-footer {
-    text-align: center;
-    padding: 15px;
-    color: #666;
-    font-size: 13px;
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
 }
 
-
-/* LOGOUT POPUP */
-
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.dashboard-card {
+    border-radius: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.modal[hidden] {
-    display: none;
-}
+/* ==============================
+   EQUIPMENT PAGE
+============================== */
 
-.modal-content {
-    background-color: white;
-    padding: 30px;
-    width: 350px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.modal-content h3 {
-    color: #1e3a5f;
-}
-
-.modal-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.modal-buttons button {
-    padding: 10px 25px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #1e3a5f;
-    color: white;
-}
-
-.modal-buttons button:hover {
-    background-color: #34577f;
-}
-
-
-/* MOBILE RESPONSIVENESS */
-
-@media (max-width: 768px) {
-
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-
-    .main-content {
-        margin-left: 0;
-        padding: 15px;
-    }
-
-    .steps-container {
-        flex-direction: column;
-    }
-
-    .rules-container {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-/* EQUIPMENT PAGE */
-
-.page-header {
-    margin-bottom: 30px;
-}
-
-.page-header h1 {
-    color: #1e3a5f;
-    margin-bottom: 8px;
-}
-
-.page-header p {
-    color: #666;
-}
-
-/* Three cards per row */
 .equipment-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
 }
 
-/* Equipment bubble container */
 .equipment-card {
-    background: white;
-    border-radius: 16px;
     padding: 18px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.equipment-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
-}
-
-/* Equipment image */
 .equipment-card img {
     width: 100%;
     height: 180px;
@@ -300,7 +311,6 @@ footer {
     border-radius: 12px;
 }
 
-/* Equipment details */
 .equipment-info {
     padding: 15px 5px 5px;
 }
@@ -311,12 +321,12 @@ footer {
 }
 
 .equipment-info p {
-    color: #555;
+    color: #34445a;
     margin: 8px 0;
 }
 
-/* Borrow button inside the card */
-.borrow-btn {
+.borrow-btn,
+.edit-equipment-btn {
     width: 100%;
     padding: 12px;
     margin-top: 15px;
@@ -329,32 +339,40 @@ footer {
     transition: background 0.2s ease;
 }
 
-.borrow-btn:hover {
+.borrow-btn:hover,
+.edit-equipment-btn:hover {
     background: #294f7c;
 }
 
-/* Responsive layout */
-@media (max-width: 1000px) {
-    .equipment-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.edit-equipment-btn {
+    display: block;
+    padding: 11px;
+    font-size: 14px;
 }
 
-@media (max-width: 600px) {
-    .equipment-grid {
-        grid-template-columns: 1fr;
-    }
+/* ==============================
+   BORROWING REQUEST POPUP
+============================== */
+
+#borrowModal.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
 }
 
-
-
-/* BORROWING REQUEST POPUP */
-
-.borrow-modal-content {
-    width: 90%;
-    max-width: 500px;
+#borrowModal .borrow-modal-content {
+    width: 100%;
+    max-width: 450px;
     max-height: 90vh;
     overflow-y: auto;
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
 }
 
 .borrow-modal-content h2 {
@@ -362,12 +380,21 @@ footer {
     margin-bottom: 10px;
 }
 
-#selectedEquipment {
-    background-color: #f0f4f8;
+#selectedEquipment,
+.account-info {
+    background: #f0f4f8;
+    color: #1e3a5f;
     padding: 12px;
     border-radius: 8px;
+}
+
+#selectedEquipment {
     margin-bottom: 20px;
-    color: #1e3a5f;
+}
+
+.account-info {
+    font-size: 13px;
+    margin: 10px 0;
 }
 
 #borrowForm {
@@ -378,7 +405,7 @@ footer {
 
 #borrowForm label {
     font-weight: bold;
-    color: #333333;
+    color: #333;
     margin-top: 8px;
 }
 
@@ -386,7 +413,7 @@ footer {
 #borrowForm textarea {
     width: 100%;
     padding: 11px;
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
     border-radius: 8px;
     font-family: Arial, sans-serif;
     font-size: 14px;
@@ -419,106 +446,43 @@ footer {
 }
 
 #submitBorrow {
-    background-color: #1e3a5f;
+    background: #1e3a5f;
     color: white;
 }
 
 #cancelBorrow {
-    background-color: #e5e7eb;
-    color: #333333;
+    background: #e5e7eb;
+    color: #333;
 }
-
 
 /* ==============================
    MY BORROWINGS PAGE
 ============================== */
 
-.borrowings-list {
+.borrowings-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+    gap: 25px;
+    align-items: start;
 }
 
 .borrowing-card {
-    background-color: #ffffff;
     padding: 22px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    margin: 0;
+    min-height: 0;
+    height: auto;
+    overflow-wrap: anywhere;
 }
 
 .borrowing-card h3 {
-    color: #1e3a5f;
     margin-top: 0;
     margin-bottom: 15px;
 }
 
 .borrowing-card p {
-    color: #555555;
     margin: 10px 0;
-    overflow-wrap: anywhere;
+    line-height: 1.6;
 }
-
-.borrowing-status {
-    display: inline-block;
-    padding: 7px 13px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.status-pending {
-    background-color: #fff3cd;
-    color: #856404;
-}
-
-.status-approved {
-    background-color: #d4edda;
-    color: #155724;
-}
-
-.status-declined {
-    background-color: #f8d7da;
-    color: #721c24;
-}
-
-.empty-message {
-    background-color: #ffffff;
-    padding: 45px 25px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.empty-message h3 {
-    color: #1e3a5f;
-}
-
-.empty-message p {
-    color: #666666;
-    margin-bottom: 20px;
-}
-
-.empty-message a {
-    display: inline-block;
-    background-color: #1e3a5f;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 11px 20px;
-    border-radius: 8px;
-}
-
-.empty-message a:hover {
-    background-color: #294f7c;
-}
-
-/* Responsive layout */
-@media screen and (max-width: 900px) {
-    .borrowings-list {
-        grid-template-columns: 1fr;
-    }
-}
-
 
 /* ==============================
    HISTORY PAGE
@@ -531,55 +495,369 @@ footer {
 }
 
 .history-card {
-    background-color: #ffffff;
     padding: 22px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    border-left: 5px solid #1e3a5f;
+    background: rgba(255, 255, 255, 0.68);
+    border-color: rgba(255, 255, 255, 0.85);
+    border-left-color: #1e3a5f;
+    box-shadow: 0 8px 25px rgba(20, 40, 70, 0.16);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .history-card h3 {
     color: #1e3a5f;
     margin-top: 0;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .history-card p {
-    color: #555555;
+    color: #34445a;
     margin: 10px 0;
     overflow-wrap: anywhere;
 }
 
-.history-status {
+.history-status,
+.status-approved,
+.status-declined,
+.status-pending {
     display: inline-block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.history-status {
     padding: 7px 13px;
     border-radius: 20px;
     font-size: 13px;
-    font-weight: bold;
     margin-top: 10px;
 }
 
-.history-status.status-approved {
-    background-color: #d4edda;
+.history-status.status-approved,
+.status-approved {
     color: #155724;
+    background: #d4edda;
 }
 
-.history-status.status-declined {
-    background-color: #f8d7da;
+.history-status.status-declined,
+.status-declined {
     color: #721c24;
+    background: #f8d7da;
 }
 
-/* Responsive layout */
-@media screen and (max-width: 900px) {
+.status-pending {
+    color: #d97706;
+    background: #fff0d6;
+}
+
+/* ==============================
+   STAFF REQUEST ACTION BUTTONS
+============================== */
+
+.request-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.approve-btn,
+.decline-btn {
+    flex: 1;
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.approve-btn {
+    background: #1e3a5f;
+    color: white;
+}
+
+.approve-btn:hover {
+    background: #294f7c;
+}
+
+.decline-btn {
+    background: #f2e8e8;
+    color: #a83232;
+}
+
+.decline-btn:hover {
+    background: #e8d5d5;
+}
+
+.request-actions button:active {
+    transform: scale(0.98);
+}
+
+/* ==============================
+   REQUEST STATUS
+============================== */
+
+.status-approved {
+    color: #218838;
+    background: #e6f4ea;
+}
+
+.status-declined {
+    color: #b02a37;
+    background: #f8d7da;
+}
+
+/* ==============================
+   STUDENT NOTIFICATIONS
+============================== */
+
+.notification-count {
+    display: inline-block;
+    background: #dc3545;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 7px;
+    border-radius: 50%;
+    margin-left: 6px;
+}
+
+.notification-count[hidden] {
+    display: none;
+}
+
+.notification-filters,
+.notification-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.notification-filter,
+.notification-actions button {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.notification-filter {
+    background: #e9edf5;
+    color: #172b4d;
+}
+
+.notification-filter.active,
+.notification-actions button {
+    background: #172b4d;
+    color: white;
+}
+
+.notifications-list {
+    display: grid;
+    gap: 15px;
+}
+
+.notification-card {
+    padding: 20px;
+}
+
+.notification-card.unread {
+    border-left: 5px solid #244b80;
+    background: rgba(244, 247, 252, 0.65);
+}
+
+.notification-card h3 {
+    margin-top: 0;
+}
+
+.notification-card p {
+    margin: 12px 0;
+}
+
+.notification-card small {
+    display: block;
+    color: #52647a;
+    margin-bottom: 12px;
+}
+
+.notification-card button {
+    padding: 8px 13px;
+    border: none;
+    border-radius: 7px;
+    background: #172b4d;
+    color: white;
+    cursor: pointer;
+}
+
+.notification-card button:disabled {
+    background: #e6eaf0;
+    color: #555;
+    cursor: default;
+}
+
+.notification-status {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #52647a;
+    font-size: 13px;
+}
+
+/* ==============================
+   LOGOUT CONFIRMATION POPUP
+============================== */
+
+.logout-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 18, 35, 0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.logout-modal[hidden] {
+    display: none !important;
+}
+
+.logout-modal-content {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+
+    padding: 30px;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.logout-modal-content h3 {
+    color: #1e3a5f;
+}
+
+.logout-modal-content p {
+    color: #333;
+}
+
+.logout-modal-content .modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.logout-modal-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #1e3a5f;
+    color: white;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.logout-modal-content button:hover {
+    background: #34577f;
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   HOVER EFFECTS
+============================== */
+
+.equipment-card:hover,
+.rule-card:hover,
+.dashboard-card:hover,
+.history-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(30, 58, 95, 0.18);
+}
+
+/* ==============================
+   HIDDEN ELEMENTS
+============================== */
+
+[hidden] {
+    display: none !important;
+}
+
+/* ==============================
+   RESPONSIVE LAYOUT
+============================== */
+
+@media (max-width: 1000px) {
+    .equipment-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
     .history-list {
+        grid-template-columns: 1fr;
+    }
+
+    .borrowings-list {
         grid-template-columns: 1fr;
     }
 }
 
-.account-info {
-    background-color: #f0f4f8;
-    color: #1e3a5f;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 13px;
-    margin: 10px 0;
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: calc(100% - 30px);
+        height: auto;
+        margin: 15px;
+        border-radius: 18px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .steps-container {
+        flex-direction: column;
+    }
+
+    .rules-container {
+        grid-template-columns: 1fr;
+    }
 }
+
+@media (max-width: 700px) {
+    .borrowings-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .equipment-grid,
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+}
+

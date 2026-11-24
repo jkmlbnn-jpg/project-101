@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EquipTrack - Staff Dashboard</title>
+
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../scripts.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="sidebar">
+
+        <h2>EquipTrack</h2>
+        <p>CICS Equipment Borrowing System</p>
+
+        <nav>
+            <a href="staff.html" class="active">Dashboard</a>
+            <a href="requests.html">Borrowing Requests</a>
+            <a href="staff_equipment.html">Equipment Management</a>
+            <a href="staff_history.html">Borrowing History</a>
+        </nav>
+
+        <button type="button" id="logoutBtn">Logout</button>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Personalized Dashboard Greeting -->
+        <div class="dashboard-greeting">
+
+            <div>
+                <h2 id="dashboardGreeting">Hello, Staff!</h2>
+                <p id="dashboardRole">Staff Portal</p>
+            </div>
+
+            <div class="greeting-avatar">
+                <span>👤</span>
+            </div>
+
+        </div>
+
+        <!-- Welcome Banner -->
+        <section class="welcome-banner">
+
+            <h2>Staff Overview</h2>
+
+            <p>
+                Welcome to the staff management area. Here you can review student
+                borrowing applications, manage available equipment, and monitor
+                borrowing activities.
+            </p>
+
+        </section>
+
+        <!-- Dashboard Summary Cards -->
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+                <h3>Total Requests</h3>
+                <p id="totalRequests">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Pending Requests</h3>
+                <p id="pendingRequests">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Approved Requests</h3>
+                <p id="approvedRequests">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Declined Requests</h3>
+                <p id="declinedRequests">0</p>
+            </div>
+
+        </div>
+
+        <!-- About EquipTrack -->
+        <section class="content-section">
+
+            <h2>About EquipTrack</h2>
+
+            <p>
+                EquipTrack is a web-based system designed to make
+                equipment borrowing within the College of Informatics
+                and Computing Sciences (CICS) easier and more organized.
+            </p>
+
+            <p>
+                Students and faculty can browse available equipment,
+                submit borrowing requests, and monitor the status of
+                their applications.
+            </p>
+
+        </section>
+
+        <!-- Borrowing Guidelines -->
+        <section class="content-section">
+
+            <h2>Borrowing Rules and Guidelines</h2>
+
+            <div class="rules-container">
+
+                <div class="rule-card">
+                    <h4>Return Equipment on Time</h4>
+
+                    <p>
+                        Make sure to return borrowed equipment
+                        on or before the scheduled return date.
+                    </p>
+                </div>
+
+                <div class="rule-card">
+                    <h4>Handle Equipment with Care</h4>
+
+                    <p>
+                        Use the equipment responsibly and
+                        avoid causing damage.
+                    </p>
+                </div>
+
+                <div class="rule-card">
+                    <h4>Provide Accurate Information</h4>
+
+                    <p>
+                        Always provide correct personal details
+                        when submitting a borrowing request.
+                    </p>
+                </div>
+
+                <div class="rule-card">
+                    <h4>Wait for Staff Approval</h4>
+
+                    <p>
+                        Do not assume your request is approved
+                        until the equipment staff confirms it.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>
+                EquipTrack | College of Informatics and
+                Computing Sciences (CICS)
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- Logout Confirmation Popup -->
+    <div id="logoutModal" class="logout-modal" hidden>
+
+        <div class="logout-modal-content">
+
+            <h3>Confirm Logout</h3>
+
+            <p>Are you sure you want to log out?</p>
+
+            <div class="modal-buttons">
+
+                <button type="button" id="confirmLogout">
+                    Yes, Logout
+                </button>
+
+                <button type="button" id="cancelLogout">
+                    Cancel
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,64 +1,75 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EquipTrack | My Borrowings</title>
+
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
 </head>
+
 <body>
 
     <!-- SIDEBAR NAVIGATION -->
-    <aside class="sidebar">
+    <div class="sidebar">
+
         <h2>EquipTrack</h2>
+        <p>CICS Equipment Borrowing System</p>
 
         <nav>
             <a href="home.html">Home</a>
             <a href="equipment.html">Equipment</a>
             <a href="borrowings.html" class="active">My Borrowings</a>
             <a href="history.html">History</a>
+            <a href="notifications.html" class="notification-nav-link">
+            Notifications
+            <span id="notificationCount" class="notification-count" hidden>0</span>
+        </a>
         </nav>
 
-        <button id="logoutBtn" class="logout-btn">Logout</button>
-    </aside>
+        <button type="button" id="logoutBtn">Logout</button>
 
+    </div>
 
     <!-- MAIN CONTENT -->
     <main class="main-content">
 
-        <section class="page-header">
+        <div class="page-header">
             <h1>My Borrowings</h1>
             <p>View and monitor the status of your equipment borrowing requests.</p>
-        </section>
+        </div>
 
-        <!-- REQUESTS WILL APPEAR HERE -->
-        <section id="borrowingsList" class="borrowings-list">
-
-        </section>
+        <!-- STUDENT BORROWING REQUESTS -->
+        <div id="borrowingsList" class="borrowings-grid"></div>
 
         <!-- EMPTY MESSAGE -->
-        <div id="emptyBorrowings" class="empty-message" hidden>
+        <div id="emptyBorrowings" hidden>
+
             <h3>No Borrowing Requests Yet</h3>
+
             <p>You haven't submitted any equipment borrowing requests.</p>
-            <a href="equipment.html">Browse Equipment</a>
+
         </div>
 
     </main>
 
+    <!-- LOGOUT CONFIRMATION MODAL -->
+    <div id="logoutModal" class="logout-modal" hidden>
 
-    <!-- LOGOUT POPUP -->
-    <div id="logoutModal" class="modal" hidden>
-        <div class="modal-content">
-            <h2>Confirm Logout</h2>
+        <div class="logout-modal-content">
+
+            <h3>Confirm Logout</h3>
+
             <p>Are you sure you want to log out?</p>
 
-            <div class="modal-buttons">
-                <button id="confirmLogout">Yes, Logout</button>
-                <button id="cancelLogout">No, Stay</button>
-            </div>
+            <button type="button" id="confirmLogout">Yes, Logout</button>
+            <button type="button" id="cancelLogout">Cancel</button>
+
         </div>
+
     </div>
 
 </body>
