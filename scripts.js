@@ -193,6 +193,13 @@ if (signupForm) {
         const password = document.getElementById("signupPassword").value;
         const role = signupRole.value;
 
+        // Prevent student emails from registering as staff/admin
+        if (role === "staff" && email.endsWith("@g.batstate-u.edu.ph")) {
+            alert("Registration Notice: A student email cannot be used to register as an Administrator. Please select Student as your account type.");
+            return;
+        }
+
+        // Require official student email for student accounts
         if (role === "student" && !email.endsWith("@g.batstate-u.edu.ph")) {
             alert("Registration failed! Students must use their official BatStateU student email (@g.batstate-u.edu.ph).");
             return;
