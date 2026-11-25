@@ -16,9 +16,17 @@
 
         <nav>
             <a href="staff.html">Dashboard</a>
-            <a href="requests.html">Borrowing Requests</a>
+
+            <a href="requests.html" class="staff-requests-link">
+                Borrowing Requests
+                <span id="staffPendingBadge" class="notification-badge" hidden>0</span>
+            </a>
+
             <a href="staff_equipment.html">Equipment Management</a>
-            <a href="staff_history.html" class="active">Borrowing History</a>
+
+            <a href="return_equipment.html">Return Equipment</a>
+
+            <a href="staff_history.html">Borrowing History</a>
         </nav>
 
         <button id="logoutBtn">Logout</button>
@@ -37,6 +45,14 @@
             <h3>No Borrowing History Yet</h3>
             <p>Approved and declined requests will appear here.</p>
         </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>
+                EquipTrack | College of Informatics and
+                Computing Sciences (CICS)
+            </p>
+        </footer>
 
     </main>
 

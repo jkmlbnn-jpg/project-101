@@ -269,3 +269,107 @@ button {
     cursor: pointer;
     z-index: 10;
 }
+
+
+/* REGISTRATION GLASS WARNING POPUP */
+
+.registration-glass-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    background: rgba(5, 15, 35, 0.35);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.registration-glass-popup {
+    width: 100%;
+    max-width: 380px;
+    padding: 35px 28px;
+
+    text-align: center;
+    color: #fff;
+
+    /* Transparent frosted glass */
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 22px;
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+
+    animation: registrationPopupIn 0.3s ease;
+}
+
+.registration-warning-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    color: white;
+    background: rgba(255, 193, 7, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.registration-glass-popup h2 {
+    margin-bottom: 12px;
+    color: white;
+    font-size: 23px;
+}
+
+.registration-glass-popup p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.registration-warning-button {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.85);
+    color: #174a85;
+
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.registration-warning-button:hover {
+    background: white;
+}
+
+@keyframes registrationPopupIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+

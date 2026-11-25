@@ -24,10 +24,11 @@
             <a href="equipment.html">Equipment</a>
             <a href="borrowings.html" class="active">My Borrowings</a>
             <a href="history.html">History</a>
+
             <a href="notifications.html" class="notification-nav-link">
-            Notifications
-            <span id="notificationCount" class="notification-count" hidden>0</span>
-        </a>
+                Notifications
+                <span id="notificationCount" class="notification-count" hidden>0</span>
+            </a>
         </nav>
 
         <button type="button" id="logoutBtn">Logout</button>
@@ -47,12 +48,22 @@
 
         <!-- EMPTY MESSAGE -->
         <div id="emptyBorrowings" hidden>
-
             <h3>No Borrowing Requests Yet</h3>
-
             <p>You haven't submitted any equipment borrowing requests.</p>
-
         </div>
+
+        <!-- ERROR MESSAGE -->
+        <div id="borrowingsError" hidden>
+            <p>Unable to load your borrowing requests. Please try again.</p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>
+                EquipTrack | College of Informatics and
+                Computing Sciences (CICS)
+            </p>
+        </footer>
 
     </main>
 
