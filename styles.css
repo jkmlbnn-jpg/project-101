@@ -18,6 +18,16 @@ body {
     padding: 0;
 }
 
+
+/* ==============================
+   STAFF BACKGROUND
+============================== */
+
+body.staff-page {
+    background-image: url("pics/bg-staff.png");
+}
+
+
 /* ==============================
    FROSTED GLASS SIDEBAR
 ============================== */
@@ -145,6 +155,20 @@ body {
 .page-header p {
     color: #52647a;
 }
+
+/* STAFF PAGE HEADER TEXT */
+body.staff-page .page-header h1,
+body.staff-page .dashboard-greeting h2 {
+    color: #ffffff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+}
+
+body.staff-page .page-header p,
+body.staff-page .dashboard-greeting p {
+    color: #eaf4ff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
 
 /* ==============================
    FOOTER
