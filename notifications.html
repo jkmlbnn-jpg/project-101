@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,21 +18,25 @@
     <!-- Navigation Bar -->
     <div class="sidebar">
 
-        <h2>EquipTrack</h2>
-        <p>CICS Equipment System</p>
+        <div class="sidebar-brand">
+            <img src="pics/equiptrack.png"
+                 alt="EquipTrack - CICS Equipment System"
+                 class="sidebar-logo-full">
+        </div>
 
         <nav>
             <a href="home.html">Home</a>
             <a href="equipment.html">Equipment</a>
             <a href="borrowings.html">My Borrowings</a>
             <a href="history.html">History</a>
+
             <a href="notifications.html" class="active">
                 Notifications
                 <span id="notificationCount" class="notification-count" hidden>0</span>
             </a>
-
-            <button type="button" id="logoutBtn">Logout</button>
         </nav>
+
+        <button type="button" id="logoutBtn">Logout</button>
 
     </div>
 
